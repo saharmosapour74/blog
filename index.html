@@ -1,176 +1,232 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
+      /* Add a gray background color with some padding */
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f1f1f1;
+      }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        font-size: 40px;
+        text-align: center;
+        background: white;
+      }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+      /* Fake image */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
 
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
+      /* Add a card effect for articles */
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+      }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+      }
 
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>cooking</h2>
+    </div>
 
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h2>cooking</h2>
-</div>
-
-<label for="menu">Choose a menu:</label>
-<!--<select>
+    <label for="menu">Choose a menu:</label>
+    <!--<select>
    
-<ul>
-    <option>   <li><a href="#section1">pizza</a></li></option>
-        <option> <li><a href="#section2">pasta</a></li></option>
-            <option> <li><a href="#section3">chicken</a></li></option>
-                <option> <li><a href="#section4">hotdog</a></li></option>
-                    <option> <li><a href="#section5">salad</a></li></option>
-</ul>
+
 
 </select>-->
-<ul>
-    <li><a href="#1">pizza</a></li>
-     <li><a href="#2">pasta</a></li>
+    <ul>
+      <li><a href="#1">pizza</a></li>
+      <li><a href="#2">pasta</a></li>
       <li><a href="#3">chicken</a></li>
-       <li><a href="#4">hotdog</a></li>
-         <li><a href="#5">salad</a></li>
-</ul>
+      <li><a href="#4">hotdog</a></li>
+      <li><a href="#5">salad</a></li>
+    </ul>
 
-<div class="row">
-  <div class="leftcolumn" style="width: 100%;" >
-    <section id="1">
-    <div class="card">
-      <h2 style="text-align: center;">pizza</h2>
-      <img src="F:\projREACT\pic\pizza.jpg" alt="pizza" width="100%" height="10%" class="center">
-      <p style="text-align: center;">baked in an oven or gas stove or oven, and is usually covered with tomato sauce and cheese, and other desired ingredients 
-        are added to the bread. The cheese used is usually mozzarella cheese or pizza cheese. Various ingredients are also used to
-         prepare pizza.</p>
-         <p style="text-align: center;"><a href="F:\projREACT\pizza.html" target="_blank">Some text..</a></p>
-    </div>
-</section>
-<section id="2">
-    <div class="card">
-        <h2 style="text-align: center;">pasta</h2>
-        <img src="F:\projREACT\pic\pasta.jpg" alt="pasta" width="50%" height="10%" class="center">
-        <p style="text-align: center;"> Pasta or kherak, meaning dough, is a general term for various types of Italian noodles, made from flour, water or egg dough
-            . Pasta is available in about 350 different forms. Some popular forms of pasta are spaghetti, macaroni, fusilli, rigatoni,
-             shells, capellini, penne, linguini, bucatini, tagliatelle, tortellini, ravioli, and lasagna</p>
-             <p style="text-align: center;"><a href="https://www.simplyrecipes.com/recipes/homemade_pizza/" target="_blank">Some text..</a></p>
-      </div>
-    </section>
+    <div class="row">
+      <div class="leftcolumn" style="width: 100%">
+        <section id="1">
+          <div class="card">
+            <h2 style="text-align: center">pizza</h2>
+            <img
+              src="pic/pizza.jpg"
+              alt="pizza"
+              width="100%"
+              height="10%"
+              class="center"
+            />
+            <p style="text-align: center">
+              baked in an oven or gas stove or oven, and is usually covered with
+              tomato sauce and cheese, and other desired ingredients are added
+              to the bread. The cheese used is usually mozzarella cheese or
+              pizza cheese. Various ingredients are also used to prepare pizza.
+            </p>
+            <p style="text-align: center">
+              <a href="pizza.html" target="_blank">Some text..</a>
+            </p>
+          </div>
+        </section>
+        <section id="2">
+          <div class="card">
+            <h2 style="text-align: center">pasta</h2>
+            <img
+              src="pic/pasta.jpg"
+              alt="pasta"
+              width="50%"
+              height="10%"
+              class="center"
+            />
+            <p style="text-align: center">
+              Pasta or kherak, meaning dough, is a general term for various
+              types of Italian noodles, made from flour, water or egg dough .
+              Pasta is available in about 350 different forms. Some popular
+              forms of pasta are spaghetti, macaroni, fusilli, rigatoni, shells,
+              capellini, penne, linguini, bucatini, tagliatelle, tortellini,
+              ravioli, and lasagna
+            </p>
+            <p style="text-align: center">
+              <a
+                href="https://www.simplyrecipes.com/recipes/homemade_pizza/"
+                target="_blank"
+                >Some text..</a
+              >
+            </p>
+          </div>
+        </section>
 
-<section id="3">
-      <div class="card">
-        <h2 style="text-align: center;">chicken</h2>
-        <img src="F:\projREACT\pic\chicken.jpg" alt="chichen" width="50%" height="10%" class="center">
-        <p style="text-align: center;">Chicken is known as the most common poultry meat in the world. Chicken is prepared by grilling, roasting, frying, steaming 
-            and stewing.</p>
-            <p style="text-align: center;"><a href="F:\projREACT\chicken"  target="_blank">Some text..</a></p>
-      </div>
-    </section>
+        <section id="3">
+          <div class="card">
+            <h2 style="text-align: center">chicken</h2>
+            <img
+              src="pic/chicken.jpg"
+              alt="chichen"
+              width="50%"
+              height="10%"
+              class="center"
+            />
+            <p style="text-align: center">
+              Chicken is known as the most common poultry meat in the world.
+              Chicken is prepared by grilling, roasting, frying, steaming and
+              stewing.
+            </p>
+            <p style="text-align: center">
+              <a href="chicken.html" target="_blank">Some text..</a>
+            </p>
+          </div>
+        </section>
 
-<section id="4">
-      <div class="card">
-        <h2 style="text-align: center;">hotdog</h2>
-        <img src="F:\projREACT\pic\hotdog.jpg" alt="hotdog" width="50%" height="10%" class="center">
-        <p style="text-align: center;">Hot dog hot sandwich includes cooked sausage - steamed, grilled or fried - and soft fantasy bun for hot dog, which is also 
-            served with lettuce, mustard sauce, ketchup sauce and spices, and it has different types and sizes. It is not known when 
-            and by whom this name was chosen for this type of sandwich.</p>
-            <p style="text-align: center;"><a href="F:\projREACT\hotdog" target="_blank">Some text..</a></p>
-      </div>
-    </section>
+        <section id="4">
+          <div class="card">
+            <h2 style="text-align: center">hotdog</h2>
+            <img
+              src="pic/hotdog.jpg"
+              alt="hotdog"
+              width="50%"
+              height="10%"
+              class="center"
+            />
+            <p style="text-align: center">
+              Hot dog hot sandwich includes cooked sausage - steamed, grilled or
+              fried - and soft fantasy bun for hot dog, which is also served
+              with lettuce, mustard sauce, ketchup sauce and spices, and it has
+              different types and sizes. It is not known when and by whom this
+              name was chosen for this type of sandwich.
+            </p>
+            <p style="text-align: center">
+              <a href="F:\projREACT\hotdog" target="_blank">Some text..</a>
+            </p>
+          </div>
+        </section>
 
-<section id="5">
-      <div class="card">
-        <h2 style="text-align: center;">salad</h2>
-        <img src="F:\projREACT\pic\saladjpg.jpg" alt="salad" width="50%" height="10%" class="center">
-        <p style="text-align: center;">Salad is a food that is consumed before the meal as an appetizer, after the main meal as a separate meal, together with the
-             main meal, or as a main meal itself. The word in French comes from a Latin word that means salty and coated salt</p>
-             <p style="text-align: center;"><a href="F:\projREACTvv\salad.html" target="_blank">Some text..</a></p>
+        <section id="5">
+          <div class="card">
+            <h2 style="text-align: center">salad</h2>
+            <img
+              src="pic/saladjpg.jpg"
+              alt="salad"
+              width="50%"
+              height="10%"
+              class="center"
+            />
+            <p style="text-align: center">
+              Salad is a food that is consumed before the meal as an appetizer,
+              after the main meal as a separate meal, together with the main
+              meal, or as a main meal itself. The word in French comes from a
+              Latin word that means salty and coated salt
+            </p>
+            <p style="text-align: center">
+              <a href="F:\projREACTvv\salad.html" target="_blank"
+                >Some text..</a
+              >
+            </p>
+          </div>
+        </section>
       </div>
-    </section>
-  </div>
-  <!--<div class="rightcolumn">
+      <!--<div class="rightcolumn">
 
   </div>-->
-</div>
+    </div>
 
-<!--<div class="footer">
+    <!--<div class="footer">
   <h2>Footer</h2>
 </div>-->
-
-</body>
+  </body>
 </html>
