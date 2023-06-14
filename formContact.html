@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>فرم مشترکین</title>
+</head>
+<body>
+<h1>فرم مشترکین</h1>
+<p>لطفا اطلاعات خود را در فرم زیر وارد کنید:</p>
+<form id="subscription-form">
+<label for="name">نام و نام خانوادگی:</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="email">ایمیل:</label>
+<input type="email" id="email" name="email"><br><br>
+<label for="phone">شماره تلفن:</label>
+<input type="tel" id="phone" name="phone"><br><br>
+<button type="submit">ثبت</button>
+</form>
+
+<script>
+// ایجاد یک متغیر برای دسترسی به فرم
+const form = document.getElementById("subscription-form");
+
+// افزودن رویداد submit به فرم
+form.addEventListener("submit", (event) => {
+event.preventDefault(); // جلوگیری از ارسال فرم به صفحه جدید
+
+// جمع آوری اطلاعات ورودی کاربر
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+
+// ارسال اطلاعات به یک سرور یا دیتابیس
+// در اینجا از console.log() برای نمایش اطلاعات استفاده شده است
+console.log("نام: " + name);
+console.log("ایمیل: " + email);
+console.log("شماره تلفن: " + phone);
+
+// پاک کردن اطلاعات ورودی فرم
+form.reset();
+});
+</script>
+</body>
+</html>
